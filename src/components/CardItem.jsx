@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CardItem = () => {
+const CardItem = (props) => {
   return (
     <>
     <li className="cards__item">
-        <Link className='cards__item__link'>
-            <figure className="cards__item__pic-wrap">
-                <img src="/" alt="Travel img" className="cards__item__img" />
+        <Link className='cards__item__link' to={props.path}>
+            <figure data-category={props.label} className="cards__item__pic-wrap">
+                <img src={props.src} alt="Travel img" className="cards__item__img" />
             </figure>
             <div className="cards__item__info">
                 <h5 className="cards__item__text">
-                    
+                    {props.text}
+
                 </h5>
             </div>
         </Link>

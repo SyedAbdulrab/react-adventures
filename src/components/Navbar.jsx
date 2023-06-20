@@ -12,6 +12,7 @@ function Navbar() {
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
+      print(window.innerWidth)
       setButton(false);
     } else {
       setButton(true);
@@ -19,6 +20,7 @@ function Navbar() {
   };
 
   useEffect(() => {
+
     showButton();
   }, []);
 
